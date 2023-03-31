@@ -11,6 +11,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import JSONtoTable from './JSONtoTable';
 import Spinner from './Spinner';
+import modelImg from './model_summary.png';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -106,7 +107,7 @@ function App() {
 
   return (
     <div className='container'>
-      <div style={{backgroundColor: "darkblue"}}>
+      <div style={{backgroundColor: "darkblue",height:"10%"}}>
         <h1 style={{textAlign: "center", color: "white"}}>Derivative Pricing</h1>
       </div>
       <div className='section1' style={{display: "flex", flexDirection: "column"}}>
@@ -118,7 +119,7 @@ function App() {
         
         <div style={{alignSelf: "center"}}>
           {
-            <img style={{width: "500px", margin: "10px"}} id='plot-image' src='https://marketsworkshop.s3.amazonaws.com/mldata/dataplot.png' alt=''>
+            <img style={{width: "500px", margin: "10px"}} id='plot-image' src={modelImg} alt=''>
 
             </img>}
         </div>

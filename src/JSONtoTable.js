@@ -45,10 +45,10 @@ function JSONtoTable({data}) {
                 {<TableCell style={{backgroundColor: "black", color: "white"}}>{x.toUpperCase()}</TableCell>}
             )
         } */}
-          <StyledTableCell style={{backgroundColor: "black", color: "white"}}>INSTRUMENTID</StyledTableCell>
-          <StyledTableCell style={{backgroundColor: "black", color: "white"}}>ACTUAL</StyledTableCell>
-          <StyledTableCell style={{backgroundColor: "black", color: "white"}}>PREDICTED</StyledTableCell>
-          <StyledTableCell style={{backgroundColor: "black", color: "white"}}>DIFF</StyledTableCell>
+          <StyledTableCell style={{backgroundColor: "black", color: "white"}}>InstrumentId</StyledTableCell>
+          <StyledTableCell style={{backgroundColor: "black", color: "white"}}>Actual Price(Quantlib)</StyledTableCell>
+          <StyledTableCell style={{backgroundColor: "black", color: "white"}}>Predicted Price(Model)</StyledTableCell>
+          <StyledTableCell style={{backgroundColor: "black", color: "white"}}>Diff</StyledTableCell>
         </StyledTableRow>
       </TableHead>
       <TableBody>
