@@ -67,7 +67,7 @@ function App() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
       };
-  fetch('http://ml-alb-808211269.us-east-1.elb.amazonaws.com/', requestOptions)
+  fetch('https://ml-alb-808211269.us-east-1.elb.amazonaws.com/', requestOptions)
       .then(response => response.json())
       .then((text) => {
         setJsonToTableData(text.data);
