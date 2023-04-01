@@ -37,7 +37,6 @@ function App() {
   const [data,setData]=useState([]);
   const [isloading, setIsLoading] = useState(false);
   const [jsonToTableData, setJsonToTableData] = useState([]);
-  const [plotImg, setPlotImg] = useState([]);
 
   const getData=()=>{
     fetch('./data.json'
@@ -62,6 +61,7 @@ function App() {
 
   function handleClick(){
     setIsLoading(true);
+
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -71,7 +71,6 @@ function App() {
       .then(response => response.json())
       .then((text) => {
         setJsonToTableData(text.data);
-        setPlotImg(text.pltImg)
         setIsLoading(false);
        
         let res = document.getElementById("flask-resp");
@@ -168,12 +167,12 @@ function App() {
 
           {isloading ? <Spinner/> : 
             <div style={{display: "flex", flexDirection: "row"}}>
-              <div id='flask-resp' style={{flex:"0 0 50%",padding: "5% 2% 0 0",alignItems: "center"}}>
+              <div id='flask-resp' style={{flex:"0 0 50%",padding: "1% 2% 0 0",alignItems: "center"}}>
 
               {jsonToTableData.length > 0 ? <JSONtoTable data={jsonToTableData} /> : false}
               </div>
               <div id='flask-resp-img' style={{flex:"0 0 50%",padding: "2%",alignItems: "right"}}>
-                <img src={plotImg} alt='' style={{width: "500px"}}></img>  {/* hardcoded image link */}
+               {jsonToTableData.length > 0 ?<img src="https://marketsworkshop.s3.amazonaws.com/mldata/PredVsAct.png" alt='' style={{width: "500px"}}></img> : false}  {/* hardcoded image link */}
               </div>
             </div>
           }
