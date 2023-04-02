@@ -157,7 +157,7 @@ function App() {
         <div className='section3'>
           <div className='sec3headerwrapper' style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
 
-            <h4 style={{paddingLeft: "10px"}}>PREDICT PRICING WITH TEST DATA</h4>
+            <h4 style={{paddingLeft: "10px"}}>ACTUAL AND PREDICTED PRICES</h4>
             <div style={{margin: "10px"}}>            
               <Button onClick={handleClick} disabled={isloading} variant="contained" color="primary" component="span">
                 Predict Price
